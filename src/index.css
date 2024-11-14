@@ -1,0 +1,305 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+/* Configuração geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  /* Estilo para o Nav */
+  nav {
+    background-color: #1e40af; /* Azul profundo */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  nav h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+ 
+  nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+ 
+  nav a:hover {
+    color: #9ca3af; /* Cinza claro */
+  }
+ 
+  /* Estilo para o Footer */
+  footer {
+    background-color: #1f2937; /* Cinza escuro */
+    color: #d1d5db;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+  }
+ 
+  footer a {
+    color: #d1d5db;
+    transition: color 0.3s ease;
+  }
+ 
+  footer a:hover {
+    color: #6b7280; /* Cinza médio */
+  }
+ 
+  /* Estilo para os Botões */
+  button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+ 
+  button.bg-blue-600:hover {
+    background-color: #2563eb; /* Azul claro */
+  }
+ 
+  button.bg-red-600:hover {
+    background-color: #dc2626; /* Vermelho claro */
+  }
+ 
+  button.bg-green-600:hover {
+    background-color: #16a34a; /* Verde claro */
+  }
+ 
+ 
+  /* Estilos para o formulário de login */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .login-container h2 {
+    font-size: 1.75rem;
+    color: #1e40af; /* Azul profundo */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .login-container label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563; /* Cinza escuro */
+    margin-bottom: 0.25rem;
+  }
+ 
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1; /* Cinza claro */
+    border-radius: 0.375rem;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+  }
+ 
+  .login-container input[type="text"]:focus,
+  .login-container input[type="password"]:focus {
+    border-color: #1e40af; /* Azul profundo */
+  }
+ 
+  .login-container button1 {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2563eb; /* Azul */
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+ 
+  .login-container button:hover {
+    background-color: #1d4ed8; /* Azul escuro */
+  }
+ 
+  .login-container .logout-button {
+    background-color: #dc2626; /* Vermelho */
+    margin-top: 1rem;
+  }
+ 
+  .login-container .logout-button:hover {
+    background-color: #b91c1c; /* Vermelho escuro */
+  }
+ 
+  /* Mensagem de erro */
+  .login-container .error-message {
+    font-size: 0.875rem;
+    color: #dc2626; /* Vermelho */
+    text-align: center;
+    margin-top: 1rem;
+  }
+ 
+ 
+ 
+  /* Estilo para o título e parágrafos da Home */
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e40af;
+    text-align: center;
+    margin: 1rem 0;
+  }
+ 
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #4b5563;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+ 
+  /* Estilo para o Slideshow */
+  .slideshow-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+ 
+  .slideshow-container img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+  }
+  /* Estilo para o Card */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+ 
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+ 
+  /* Responsividade */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+ 
+    footer {
+      flex-direction: column;
+    }
+ 
+    h1 {
+      font-size: 1.75rem;
+    }
+ 
+    p {
+      font-size: 0.9rem;
+    }
+  }
+ 
+  /* Estilos para o formulário de cadastro */
+.cadastro-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+ 
+  .cadastro-container h2 {
+    font-size: 1.75rem;
+    color: #1e40af; /* Azul profundo */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .cadastro-container label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4b5563; /* Cinza escuro */
+    margin-bottom: 0.25rem;
+  }
+ 
+  .cadastro-container input[type="text"],
+  .cadastro-container input[type="email"],
+  .cadastro-container input[type="tel"],
+  .cadastro-container input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1; /* Cinza claro */
+    border-radius: 0.375rem;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+  }
+ 
+  .cadastro-container input[type="text"]:focus,
+  .cadastro-container input[type="email"]:focus,
+  .cadastro-container input[type="tel"]:focus,
+  .cadastro-container input[type="password"]:focus {
+    border-color: #1e40af; /* Azul profundo */
+  }
+ 
+  .cadastro-container button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #16a34a; /* Verde */
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+ 
+  .cadastro-container button:hover {
+    background-color: #15803d; /* Verde escuro */
+  }
+ 
+  /* Mensagem de sucesso ou erro */
+  .cadastro-container .message {
+    font-size: 0.875rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+ 
+  .cadastro-container .message.success {
+    color: #16a34a; /* Verde */
+  }
+ 
+  .cadastro-container .message.error {
+    color: #dc2626; /* Vermelho */
+  }
