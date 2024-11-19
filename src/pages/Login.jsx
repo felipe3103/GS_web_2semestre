@@ -29,6 +29,12 @@ function Login() {
     }
   };
 
+  const handleLogout = () => {
+    sessionStorage.clear(); // Limpa os dados de autenticação
+    alert('Logout realizado com sucesso!');
+    navigate('/login'); // Redireciona para a página de login
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="login-container bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
@@ -54,9 +60,9 @@ function Login() {
             className="w-full p-2 mb-6 border rounded"
           />
           <button
-            type="button1"
+            type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="toggle-password"
+            className="absolute right-3 top-2 text-gray-500"
           >
             {showPassword ? <FaEyeSlash /> : <FaEye />}
           </button>
@@ -69,6 +75,14 @@ function Login() {
           Entrar
         </button>
         {errorMessage && <div className="text-red-600 mt-4 text-center">{errorMessage}</div>}
+
+        {/* Botão de Logout */}
+        <button
+          onClick={handleLogout}
+          className="w-full bg-red-500 text-white py-2 mt-4 rounded hover:bg-red-600"
+        >
+          Logout
+        </button>
       </div>
     </div>
   );
