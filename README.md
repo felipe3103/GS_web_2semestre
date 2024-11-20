@@ -61,6 +61,9 @@ Esses objetivos tornam o projeto uma ótima base para aplicações que desejam c
 - **JavaScript ES6+** - Lógica de autenticação, criptografia, e controle de sessão.
 
 
+## Link
+https://www.linkedin.com/feed/update/urn:li:activity:7265049772791656448/
+
 ## Integrantes
 
 Gustavo Henrique Martins - 556956
